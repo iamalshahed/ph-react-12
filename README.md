@@ -50,6 +50,7 @@
 
 ```bash
 ph-react-12/
+ph-react-12/
 ├─ 01_react_js_installation/
 │  ├─ public/
 │  │  └─ vite.svg
@@ -60,6 +61,36 @@ ph-react-12/
 │  │  ├─ App.jsx
 │  │  ├─ index.css
 │  │  └─ main.jsx
+│  ├─ .gitignore
+│  ├─ eslint.config.js
+│  ├─ index.html
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ README.md
+│  └─ vite.config.js
+├─ 02_js_need_to_know_for_react/
+│  ├─ destructuring.js
+│  ├─ fetch.js
+│  ├─ index.html
+│  ├─ notation.js
+│  ├─ shortcut.js
+│  └─ storage.js
+├─ 03_react_core_concept_part(1)/
+│  ├─ public/
+│  │  └─ vite.svg
+│  ├─ src/
+│  │  ├─ assets/
+│  │  │  └─ react.svg
+│  │  ├─ Actor.jsx
+│  │  ├─ App.css
+│  │  ├─ App.jsx
+│  │  ├─ Books.jsx
+│  │  ├─ index.css
+│  │  ├─ Library.jsx
+│  │  ├─ main.jsx
+│  │  ├─ Singer.jsx
+│  │  ├─ Summary.todo
+│  │  └─ Todo.jsx
 │  ├─ .gitignore
 │  ├─ eslint.config.js
 │  ├─ index.html
