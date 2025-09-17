@@ -8,7 +8,7 @@ function App() {
       <h1>React Core Concepts</h1>
       <ToDo task="Learn React" isDone={true} time={time}></ToDo>
       <ToDo task="Revise JS" isDone={false}></ToDo>
-      <ToDo task="Take a Shower" isDone={true}></ToDo>
+      <ToDo task="Take a Shower" isDone={true} time=''></ToDo>
 
       {/* components */}
       {/* <Developers name="AL Shahed" tech="JavaScript"></Developers>
