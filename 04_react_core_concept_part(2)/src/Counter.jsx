@@ -1,9 +1,6 @@
 import { useState } from "react";
 
 function Counter() {
-  const counterStyle = {
-    border: "2px solid yellow",
-  };
 
   const [count, setCount] = useState(0);
 
@@ -13,9 +10,10 @@ function Counter() {
   };
 
   return (
-    <div style={counterStyle}>
+    <div>
       <h3>Count: {count}</h3>
       <button onClick={handleAdd}>Add</button>
+      <hr />
     </div>
   );
 }
