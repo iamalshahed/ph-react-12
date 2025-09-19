@@ -36,20 +36,24 @@ function App() {
         <Users fetchUsers={fetchUsers}></Users>
       </Suspense> */}
 
-      <Suspense fallback={<h3>Friends are comming...</h3>}>
+      <Suspense fallback={<h1>Friends are comming...</h1>}>
         <Friends freindsPromise={freindsPromise}></Friends>
       </Suspense>
 
-      <Batsman></Batsman>
+      {/* <Batsman></Batsman>
       <Counter></Counter>
 
       <h1>Vite + React</h1>
-      <button onClick={handleClicked}>Click me</button>
+
+      <button onClick={handleClicked}>Click me</button> */}
       {/* <button>Click me</button> */}
-      <br />
+
+      {/* <br />
+
+
       <button onClick={handleClicked2}>Click me 2</button>
 
-      <button onClick={() => handleAdd5(20)}>Addition 20</button>
+      <button onClick={() => handleAdd5(20)}>Addition 20</button> */}
     </>
   );
 }
