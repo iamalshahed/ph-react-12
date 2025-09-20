@@ -4,31 +4,32 @@ import Batsman from "./Batsman";
 import Users from "./Users";
 import Friends from "./Friends";
 import { Suspense } from "react";
+import Players from "./Players";
 
-const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(
-  (res) => res.json()
-);
+// const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then(
+//   (res) => res.json()
+// );
 
-const fetchFriends = async () => {
-  const res = fetch("https://jsonplaceholder.typicode.com/users");
-  return (await res).json();
-};
+// const fetchFriends = async () => {
+//   const res = fetch("https://jsonplaceholder.typicode.com/users");
+//   return (await res).json();
+// };
 
 function App() {
-  const freindsPromise = fetchFriends();
+  // const freindsPromise = fetchFriends();
 
-  function handleClicked() {
-    alert("I am clicked!");
-  }
+  // function handleClicked() {
+  //   alert("I am clicked!");
+  // }
 
-  const handleClicked2 = () => {
-    alert("clicked me two!!");
-  };
+  // const handleClicked2 = () => {
+  //   alert("clicked me two!!");
+  // };
 
-  const handleAdd5 = (num) => {
-    const newNum = num + 5;
-    alert(newNum);
-  };
+  // const handleAdd5 = (num) => {
+  //   const newNum = num + 5;
+  //   alert(newNum);
+  // };
 
   return (
     <>
@@ -36,9 +37,11 @@ function App() {
         <Users fetchUsers={fetchUsers}></Users>
       </Suspense> */}
 
-      <Suspense fallback={<h1>Friends are comming...</h1>}>
+      <Players></Players>
+
+      {/* <Suspense fallback={<h1>Friends are comming...</h1>}>
         <Friends freindsPromise={freindsPromise}></Friends>
-      </Suspense>
+      </Suspense> */}
 
       {/* <Batsman></Batsman>
       <Counter></Counter>
