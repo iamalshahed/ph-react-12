@@ -5,7 +5,8 @@ import "./Countries.css";
 const Countries = ({ countriesPromise }) => {
   const [visitedCountries, setVisitedCountries] = useState([]);
   const handleVisitedCountries = (country) => {
-    console.log("handle visited countries clicked", country);
+    const newVisitedCountries = [...visitedCountries, country];
+    setVisitedCountries(newVisitedCountries);
   };
 
   const countriesData = use(countriesPromise);
@@ -13,6 +14,12 @@ const Countries = ({ countriesPromise }) => {
 
   return (
     <div>
+      <h2>Total Countries Visited: {visitedCountries.length}</h2>
+      <ol>
+        {visitedCountries.map((country) => (
+          <li key={country.ccn3.ccn3}>{country.name.common}</li>
+        ))}
+      </ol>
       <div className="grid">
         {countries.map((country) => (
           <Country
