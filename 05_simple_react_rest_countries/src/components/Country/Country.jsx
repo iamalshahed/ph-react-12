@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Country.css";
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries }) => {
   const [visited, setVisited] = useState(false);
 
   const handleVisit = () => {
@@ -18,6 +18,7 @@ const Country = ({ country }) => {
 
     // third system
     setVisited(!visited);
+    handleVisitedCountries(country);
   };
 
   return (
@@ -30,7 +31,7 @@ const Country = ({ country }) => {
         <div>
           <img
             className="flag_img"
-            src={country.flags.flags.png}
+            src={country?.flags?.flags?.png}
             alt={country.flags.flags.alt}
           />
         </div>
