@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Country.css";
 
 const Country = ({ country }) => {
+  const [visited, setVisited] = useState(false);
+
+  const handleVisit = () => {
+    /* // basic/first system
+    if (visited) {
+      setVisited(false);
+    } else {
+      setVisited(true);
+    }
+    */
+
+    // second system
+    // setVisited(visited ? false : true);
+
+    // third system
+    setVisited(!visited);
+  };
+
   return (
-    <a
-      target="_blank"
-      href={`https://www.google.com/search?q=${country.name.common}`}
-      className=""
-    >
-      <div className="box">
+    <div className="">
+      <a
+        target="_blank"
+        href={`https://www.google.com/search?q=${country.name.common}`}
+        className={`box ${visited && "if_visited"}`}
+      >
         <div>
           <img
             className="flag_img"
@@ -26,11 +44,12 @@ const Country = ({ country }) => {
             <small>Capital: {country.capital.capital}</small>
           </p>
         </div>
-      </div>
+      </a>
 
-      <button>Visit</button>
-      {/* <hr /> */}
-    </a>
+      <button className={`${visited && "btn_visited"}`} onClick={handleVisit}>
+        {visited ? "Visited" : "Not Visited"}
+      </button>
+    </div>
   );
 };
 

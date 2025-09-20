@@ -12,6 +12,19 @@
   }
 }
 
+.if_visited {
+  background: #333;
+}
+
+.btn_visited {
+  background: #2dba4e;
+  color: white;
+
+  &:hover {
+    background: #2dba4e;
+  }
+}
+
 .flag_img {
   width: 200px;
   height: auto;
