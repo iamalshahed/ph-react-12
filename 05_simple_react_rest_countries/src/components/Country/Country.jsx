@@ -1,33 +1,36 @@
 import React from "react";
+import "./Country.css";
 
 const Country = ({ country }) => {
-  const flag = {
-    width: "100px",
-    height: "auto",
-  };
-
-  const flex = {
-    display: "flex",
-    alignItems: "center",
-    gap: "16px",
-  };
-
   return (
-    <div>
-      <div style={flex}>
+    <a
+      target="_blank"
+      href={`https://www.google.com/search?q=${country.name.common}`}
+      className=""
+    >
+      <div className="box">
         <div>
           <img
-            style={flag}
+            className="flag_img"
             src={country.flags.flags.png}
             alt={country.flags.flags.alt}
           />
         </div>
         <div className="">
-            <h3>{country.name.common}</h3>
+          <h3>{country.name.common}</h3>
+          <p>
+            <small>
+              {country.area.area >= 200000 ? "Big Country" : "Small Country"}
+            </small>
+            <br />
+            <small>Capital: {country.capital.capital}</small>
+          </p>
         </div>
       </div>
-      <hr />
-    </div>
+
+      <button>Visit</button>
+      {/* <hr /> */}
+    </a>
   );
 };
 

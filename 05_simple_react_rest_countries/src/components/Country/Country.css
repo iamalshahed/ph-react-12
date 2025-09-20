@@ -1,0 +1,23 @@
+.box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 16px 0;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #333;
+  }
+}
+
+.flag_img {
+  width: 200px;
+  height: auto;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 10px;
+}
