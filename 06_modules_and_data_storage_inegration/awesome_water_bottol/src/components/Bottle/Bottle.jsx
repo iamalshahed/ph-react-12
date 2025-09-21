@@ -7,7 +7,7 @@ const Bottle = ({ bottle, handleAddToCart }) => {
 
   useEffect(() => {
     stock < 1 && setIsDisAbled(true);
-  });
+  }, [stock]);
 
   return (
     <div className="card_container">

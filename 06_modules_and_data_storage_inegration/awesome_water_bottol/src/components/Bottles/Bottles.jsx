@@ -1,13 +1,35 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Bottle from "../Bottle/Bottle";
 import "./Bottles.css";
+import { addtoStoredCart, getStoredCart } from "../../utilities/localstorage";
 
 const Bottles = ({ bottlePromise }) => {
   const [cart, setCart] = useState([]);
   const bottles = use(bottlePromise);
+
+  useEffect(() => {
+    const storedCartIds = getStoredCart();
+    // console.log(storedCartIds, bottles);
+
+    const storedCart = [];
+
+    for (const id of storedCartIds) {
+      const cartBottle = bottles.find((bottle) => bottle.id === id);
+
+      if (cartBottle) {
+        storedCart.push(cartBottle);
+      }
+    }
+
+    setCart(storedCart);
+  }, [bottles]);
+
   const handleAddToCart = (bottle) => {
     const newCart = [...cart, bottle];
     setCart(newCart);
+
+    // save the bottle id to the localStorage
+    addtoStoredCart(bottle.id);
   };
 
   return (
