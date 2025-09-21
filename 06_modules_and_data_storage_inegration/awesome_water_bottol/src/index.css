@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  background: black;
+  background: #111;
   color: white;
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -25,4 +25,9 @@ body {
   max-width: 1140px;
   padding: 16px;
   margin: 0 auto;
+}
+
+button {
+  border: none;
+  outline: none;
 }

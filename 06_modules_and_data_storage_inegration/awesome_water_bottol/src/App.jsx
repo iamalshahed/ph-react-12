@@ -7,7 +7,7 @@ const bottlePromise = fetch("/bottles.json").then((res) => res.json());
 function App() {
   return (
     <>
-      <Suspense fallback={<h3>Loading...</h3>}>
+      <Suspense fallback={<h1 className="mt">Loading...</h1>}>
         <Bottles bottlePromise={bottlePromise}></Bottles>
       </Suspense>
     </>
