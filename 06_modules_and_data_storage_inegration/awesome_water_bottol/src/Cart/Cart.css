@@ -1,0 +1,30 @@
+.cart_img_container {
+  position: relative;
+  img {
+    width: 50px;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+.div_row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.btn_delete {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  font-size: 20px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+}
