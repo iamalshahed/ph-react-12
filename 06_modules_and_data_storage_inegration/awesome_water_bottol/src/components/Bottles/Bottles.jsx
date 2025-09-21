@@ -1,10 +1,17 @@
 import React, { use } from "react";
+import Bottle from "../Bottle/Bottle";
 
 const Bottles = ({ bottlePromise }) => {
   const bottles = use(bottlePromise);
-  console.log(bottles);
 
-  return <div></div>;
+  return (
+    <div>
+      <h2>Bottles: {bottles.length}</h2>
+      {bottles.map((bottle, index) => (
+        <Bottle key={index} bottle={bottle}></Bottle>
+      ))}
+    </div>
+  );
 };
 
 export default Bottles;
