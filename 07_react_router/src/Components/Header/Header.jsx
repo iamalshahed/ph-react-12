@@ -16,6 +16,14 @@ const Header = () => {
       name: "Laptops",
       path: "/laptops",
     },
+    {
+      name: "Users",
+      path: "/users/all",
+    },
+    {
+      name: "Users - 2",
+      path: "/users-2",
+    },
   ];
 
   return (
