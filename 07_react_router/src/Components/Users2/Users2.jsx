@@ -7,8 +7,8 @@ const Users2 = ({ userPromise }) => {
   return (
     <div>
       {users.map((user, index) => (
-        <div className="">
-          <p key={index}>{user.name}</p>
+        <div key={index} className="">
+          <p>{user.name}</p>
           <Link to={`/users-2/${user.id}`}>Show Details</Link>
         </div>
       ))}
