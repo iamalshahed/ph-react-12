@@ -1,13 +1,16 @@
 import React, { use } from "react";
+import { Link } from "react-router";
 
 const Users2 = ({ userPromise }) => {
   const users = use(userPromise);
-  console.log(users);
 
   return (
     <div>
       {users.map((user, index) => (
-        <li key={index}>{user.name}</li>
+        <div className="">
+          <p key={index}>{user.name}</p>
+          <Link to={`/users-2/${user.id}`}>Show Details</Link>
+        </div>
       ))}
     </div>
   );

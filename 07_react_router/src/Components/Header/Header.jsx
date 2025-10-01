@@ -18,7 +18,7 @@ const Header = () => {
     },
     {
       name: "Users",
-      path: "/users/all",
+      path: "/users",
     },
     {
       name: "Users - 2",
