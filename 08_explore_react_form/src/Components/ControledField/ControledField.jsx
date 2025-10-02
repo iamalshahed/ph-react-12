@@ -2,12 +2,16 @@ import React, { useState } from "react";
 
 const ControledField = () => {
   const [password, setPassword] = useState("");
+  const [passErr, setPassErr] = useState("");
   const handleControledField = (e) => {
     e.preventDefault();
     console.log("submitted");
   };
   const handlePasswordOnChange = (e) => {
-    console.log(e.target.value);
+    setPassword(e.target.value);
+    password.length < 6
+      ? setPassErr("Password must be 6 character or longer")
+      : setPassErr("");
   };
 
   return (
@@ -33,6 +37,9 @@ const ControledField = () => {
               placeholder="password"
               required
             />
+            <p style={{ color: "red" }}>
+              <small>{passErr}</small>
+            </p>
           </div>
         </div>
         <div className="">
